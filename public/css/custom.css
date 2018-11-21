@@ -1,0 +1,60 @@
+@import url("http://fonts.googleapis.com/earlyaccess/amiri.css");
+@import url("http://fonts.googleapis.com/earlyaccess/droidarabickufi.css");
+
+*{
+    font-family: 'Amiri', serif;
+    
+}
+
+input {
+    font-family: 'Droid Serif', serif;
+    text-transform: lowercase;
+}
+.form-control{
+    text-transform: lowercase;
+}
+.blog-entry{
+    direction: rtl;
+}
+.card{
+    /*border-radius: 10%;*/
+}
+.card-header{
+    /*border-radius: 10%;*/
+    font-size: 28px;
+    background: rgba(100,100,100,0.5);
+}
+.card-body label,.card-body select{
+    font-size: 22px;
+}
+.blog-entry .entry--img img, .entry-related .entry--img img {
+    max-width: 100%;
+    height: 250px;
+    -moz-transition: all .35s linear;
+    -webkit-transition: all .35s linear;
+    -ms-transition: all .35s linear;
+    -o-transition: all .35s linear;
+    transition: all .35s linear;
+}
+.card table{
+    background-color: #000000;
+}
+.card table thead{
+    background-color: #dd543d;
+}
+.card table td{
+    font-size: 22px;
+}
+.margin-btm{
+    margin-bottom: 10px;
+}
+.select2 {
+    width:38.5%!important;
+    margin-right: 1.5%!important;
+}
+@media only screen and (max-width: 600px) {
+    .select2 {
+        width:75%!important;
+        margin-right: 20%!important;
+    }
+}
