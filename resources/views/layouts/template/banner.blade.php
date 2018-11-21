@@ -64,7 +64,13 @@
                              data-splitout="none"
                              data-responsive_offset="on"
                         >
-                            <div class="slide--bio text-center">{{$one_news->text}} </div>
+                            <div class="slide--bio text-center" dir="rtl" style="padding-top: 1%;padding-bottom: 1%; size: 22em; width: 82em; height: 100px;">
+
+                                @php
+                                echo wordwrap($one_news->text,180,"<br/>");
+                                @endphp
+                                {{--{{$one_news->text}}--}}
+                            </div>
                         </div>
                         <div class="tp-caption"
                              id="slide-163-layer-6"

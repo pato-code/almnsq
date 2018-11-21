@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Activity extends Model
 {
     //
-    protected $fillable=["name" , "day" , "mosque_id" , "imam_id" , "period_id" , "status_id" , "request_name"];
+    protected $fillable=["name" , "day" , "mosque_id" , "type_id" , "imam_id" , "period_id" , "status_id" , "request_name"];
     public function mosque(){
         return $this->belongsTo('App\Model\Mosque' , 'mosque_id');
     }

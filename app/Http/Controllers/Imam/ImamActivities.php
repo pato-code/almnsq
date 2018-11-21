@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Imam;
 
 use App\Model\Activity;
 use App\Model\ActivityStatus;
+use App\Model\ActivityType;
 use App\Model\City;
 use App\Model\Period;
 use App\Model\Week;
@@ -71,12 +72,14 @@ class ImamActivities extends Controller
     public function create(){
         $cities = City::all();
         $periods = Period::all();
-        return View('Activity.add' , compact('cities' , 'periods'));
+        $types = ActivityType::all();
+        return View('Activity.add' , compact('cities' , 'periods' , 'types'));
     }
     public function add(Request $request){
         $imam=Auth::user();
         $day=$request->day;
         $mosque_id = $request->mosque_id;
+
 
         $input = $request->all();
         //$tody=Carbon::today();

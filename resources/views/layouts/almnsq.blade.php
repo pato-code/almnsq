@@ -54,6 +54,8 @@
         <img src="{{asset('images/page-title/title-23.jpg')}}" alt="Background"/>
     </div>
     @yield('content')
+    @php
+    @endphp
     @yield('khotob')
     @yield('suggestion')
     @yield('complaint')
@@ -112,7 +114,7 @@
             $("#period_id").select2();
         });
     </script>
-    <script src="{{asset("js/complement.js")}}"></script>
+    <script src="{{asset("js/activity.js")}}"></script>
 
 @endif
 

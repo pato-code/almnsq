@@ -21,7 +21,7 @@
                                 {{--<span><a href="#"></a></span>--}}
                             </div>
                             <div class="entry--title">
-                            <h4><a href="#">{{$sermon->title}} </a></h4>
+                            <h4 style="word-wrap: break-word"><a href="#">{{$sermon->title}} </a></h4>
                             </div>
                             <div class="entry--content pull-left">
                             @if($sermon->mosque != null)

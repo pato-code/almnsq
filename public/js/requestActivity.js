@@ -1,7 +1,9 @@
 $(document).ready(function () {
-    $("#activity_city_id").select2();
-    $("#activity_neighborhood_id").select2();
-    $("#activity_mosque_id").select2();
+    //var city_id = $("#activity_city_id").data('select2').$dropdown.find("input").val();
+    // $("#activity_city_id").select2();
+
+    // $("#activity_neighborhood_id").select2();
+    // $("#activity_mosque_id").select2();
     $("#imam_id").select2();
     $("#activity_form").submit((e) => {
         e.preventDefault();
@@ -36,12 +38,11 @@ $(document).ready(function () {
             let option="";
             //alert(ett);
             $.each(ett, function(k, v) {
-                option = "<option value='"+v.id+"'>"+v.name+"</option>";
+                option = "<option value='"+v.name+"'>"+v.name+"</option>";
                 mosques +=option;
             });
-            option = '<option value="-1">أخري</option>';
             mosques +=option;
-            $("#activity_mosque_id").html(mosques);
+            $("#activity_mosque").html(mosques);
         });
 
     }
@@ -51,16 +52,16 @@ $(document).ready(function () {
             let neighborhoods="";
             let option="";
             $.each(data, function(k, v) {
-                option = "<option value='"+v.id+"'>"+v.name+"</option>";
+                option = "<option value='"+v.name+"'>"+v.name+"</option>";
                 neighborhoods +=option;
             });
-            $("#activity_neighborhood_id").html(neighborhoods);
+            $("#activity_neighborhood").html(neighborhoods);
             mosques();
         });
 
     });
 
-    $("#activity_neighborhood_id").change(function (){
+    $("#activity_neighborhood").change(function (){
         mosques();
     });
 });

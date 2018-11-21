@@ -11,6 +11,39 @@
                 <form method="POST" action="{{url('/activity/add')}}" aria-label="{{ __('Login') }}"
                       enctype="multipart/form-data">
                     @csrf
+                    <div class="form-group row">
+                        <div class="col-md-offset-1 col-md-11 col-sm-12">
+                            <label for="name" class="pull-left col-md-4 col-sm-12">عنوان المنشط</label>
+                            <div class="col-md-5">
+                                <input id="name" type="text"
+                                       class="form-control col-md-12 col-sm-12 form-control{{ $errors->has('strengths') ? ' is-invalid' : '' }} "
+                                       name="name"
+                                />
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-inline row">
+                        <div class="col-md-offset-1 col-md-11 col-sm-12 wow fadeIn" data-wow-duration="1.1s"
+                             data-wow-delay=".9s">
+                            <label class="pull-left col-md-4 col-sm-12 wow zoomInUp" data-wow-duration="1.5s"
+                                   data-wow-delay=".9s" for="type_id">نوع المنشط</label>
+                            <select id="type_id" class="wow slideInDown col-md-offset-2 col-md-5 col-sm-12"
+                                    data-wow-duration="2.5s" data-wow-delay="1.0s" name="type_id" style="right: 2%;"
+                                    required dir="rtl">
+                                <option value="0">إختر النوع</option>
+                                @foreach($types as $type)
+                                    <option value="{{$type->id}}">{{$type->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="form-inline row">
                         <div class="col-md-offset-1 col-md-11 col-sm-12 wow fadeIn" data-wow-duration="1.1s"
                              data-wow-delay=".9s">
