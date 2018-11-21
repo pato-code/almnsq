@@ -5,7 +5,7 @@ $(document).ready(function (){
     function mosques(){
         let neighborhood_id=$("#neighborhood_id").val();
 
-        $.get('../api/neighorhood/mosque/'+neighborhood_id, (ett) => {
+        $.get('api/neighorhood/mosque/'+neighborhood_id, (ett) => {
             let mosques="";
             let option="";
             //alert(ett);
@@ -21,7 +21,7 @@ $(document).ready(function (){
     }
     $("#city_id").change(function () {
         let city_id=$("#city_id").val();
-        $.get('../api/city/neighorhood/'+city_id, (data) => {
+        $.get('api/city/neighorhood/'+city_id, (data) => {
             let neighborhoods="";
             let option="";
             $.each(data, function(k, v) {
@@ -62,7 +62,7 @@ $(document).ready(function (){
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "../api/complement/add",
+            "url": "api/complement/add",
             "method": "POST",
             "headers": {
                 "cache-control": "no-cache",

@@ -14,7 +14,7 @@ $(document).ready(function () {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "../api/requestActivity/add",
+            "url": "api/requestActivity/add",
             "method": "POST",
             "headers": {
                 "cache-control": "no-cache",
@@ -31,7 +31,7 @@ $(document).ready(function () {
     function mosques(){
         let neighborhood_id=$("#activity_neighborhood_id").val();
 
-        $.get('../api/neighorhood/mosque/'+neighborhood_id, (ett) => {
+        $.get('api/neighorhood/mosque/'+neighborhood_id, (ett) => {
             let mosques="";
             let option="";
             //alert(ett);
@@ -47,7 +47,7 @@ $(document).ready(function () {
     }
     $("#activity_city_id").change(function () {
         let city_id=$("#activity_city_id").val();
-        $.get('../api/city/neighorhood/'+city_id, (data) => {
+        $.get('api/city/neighorhood/'+city_id, (data) => {
             let neighborhoods="";
             let option="";
             $.each(data, function(k, v) {
