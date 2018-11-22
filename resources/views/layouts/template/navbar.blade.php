@@ -14,8 +14,9 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="logo dropdown-toggle menu-item" style="font-size: 24px;" href="{{ url('/') }}">
-                        المنسق الدعوي
-                        {{--<img class="logo-light" src="{{asset('images/logo/logo-light.png')}}" alt="Whole logo">--}}
+
+                        <img class="logo-light" src="{{asset('images/logo.png')}}" width="150px" height="150px" alt="Whole logo">
+                        <img class="logo-dark" src="{{asset('images/logo.png')}}" width="150px" height="150px" alt="Whole logo">
                         {{--<img class="logo-dark" src="{{asset('images/logo/logo-dark.png')}}" alt="Whole logo">--}}
                     </a>
                 </div>

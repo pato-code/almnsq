@@ -1,8 +1,8 @@
 @extends('layouts.almnsq' , ["addNews" => true])
 @section('content')
     <div class="container">
-        <div class="card"
-             style="margin-top: 100px;margin-bottom: 15%; background: rgba(0,0,0,0.7);font-size: 22px;color: white"
+        <div class="card card-container"
+             style="margin-top: 100px;"
              dir="rtl">
             <div class="card-header">
                 إضافه خبر

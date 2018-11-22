@@ -2,8 +2,8 @@
 @section('content')
 
     <section class="container bg-overlay-dark" style="margin-top: -100px;">
-        <div class="card"
-             style="margin-top: 100px;margin-bottom: 15%; background: rgba(0,0,0,0.7);font-size: 22px;color: white"
+        <div class="card card-container"
+             style="margin-top: 100px;"
              dir="rtl">
             <div class="card-header">
                 <a href="{{ url('/location/add')  }}" class="btn btn-success">إضافة جهه</a>

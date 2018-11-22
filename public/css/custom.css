@@ -22,7 +22,7 @@ input {
 .card-header{
     /*border-radius: 10%;*/
     font-size: 28px;
-    background: rgba(100,100,100,0.5);
+    background: rgba(144,205,224,0.5);
 }
 .card-body label,.card-body select{
     font-size: 22px;
@@ -40,7 +40,7 @@ input {
     background-color: #000000;
 }
 .card table thead{
-    background-color: #dd543d;
+    background-color: #90cde0;
 }
 .card table td{
     font-size: 22px;
@@ -48,6 +48,19 @@ input {
 .margin-btm{
     margin-bottom: 10px;
 }
+.card-container{
+    margin-bottom: 0px !important;
+    background: rgba(30,185,154,0.5) !important;
+    font-size: 22px !important;
+    color: white !important;
+}
+.logo{
+    color: #0f3e68;
+}
+.footer{
+
+}
+
 .select2 {
     width:38.5%!important;
     margin-right: 1.5%!important;

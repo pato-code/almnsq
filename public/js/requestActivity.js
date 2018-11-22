@@ -1,9 +1,8 @@
 $(document).ready(function () {
     //var city_id = $("#activity_city_id").data('select2').$dropdown.find("input").val();
-    // $("#activity_city_id").select2();
-
-    // $("#activity_neighborhood_id").select2();
-    // $("#activity_mosque_id").select2();
+    $("#activity_city_id").select2();
+    $("#activity_neighborhood_id").select2();
+    $("#activity_mosque_id").select2();
     $("#imam_id").select2();
     $("#activity_form").submit((e) => {
         e.preventDefault();

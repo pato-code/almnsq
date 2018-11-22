@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Model\User;
 use App\Http\Controllers\Controller;
+use App\Model\UserGroup;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -29,6 +30,12 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+
+    /**
+     * @return string
+     */
+
+
 
     /**
      * Create a new controller instance.
@@ -63,11 +70,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $group=UserGroup::find($data['group_id']);
+        if ($group->name === "داعيه"){
+            $this->redirectTo = "/activity/add";
+        }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'group_id' => $data['group_id']
+            'group_id' => $data['group_id'],
+            'status' => 1,
         ]);
     }
 }

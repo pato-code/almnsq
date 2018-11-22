@@ -4,7 +4,7 @@
     <div class="row container" style="margin-top: 100px;margin-bottom: 100px;">
 
         <div class="col-md-6 col-sm-12" >
-            <div class="card" dir="rtl" style="background: rgba(0,0,0,0.6);color: white;">
+            <div class="card card-container" style="margin-top: 100px;" dir="rtl">
                 <div class="card-header col-sm-12 text-center">
                     تسجيل الدخول
                 </div>

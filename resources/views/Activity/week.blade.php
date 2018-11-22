@@ -1,8 +1,9 @@
 @extends('layouts.almnsq' , ["activityWeek" => true])
 @section('content')
     <div class="container">
-        <div class="card"
-             style="margin-top: 100px;margin-bottom: 2%; background: rgba(0,0,0,0.7);font-size: 22px;color: white">
+        <div class="card card-container"
+             style="margin-top: 100px;"
+        >
             <div class="card-header">
                 <div class="pull-left">
                     إستيفاء النصاب من النشاطات

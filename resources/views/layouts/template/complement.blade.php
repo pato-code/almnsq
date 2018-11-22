@@ -1,6 +1,6 @@
 <div class="container" id="complement">
-    <div class="card col-md-offset-1 wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.2s"
-         style="margin-bottom: 2%; background: rgba(0,0,0,0.7);font-size: 22px;color: white;"
+    <div class="card card-container  col-md-offset-1 wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.2s"
+         style="margin-top: 100px;"
          dir="rtl">
         <div class="card-header text-center wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.2s">
             تقييم مسجد
