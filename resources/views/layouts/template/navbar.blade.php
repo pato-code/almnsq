@@ -204,8 +204,8 @@
                                 </li>
                                 <li>
 
-                                    <a href="{{ url('news/add') }}" class="dropdown-toggle menu-item">
-                                        إضافة خبر
+                                    <a href="{{ url('news') }}" class="dropdown-toggle menu-item">
+                                        الأخبار
                                     </a>
 
                                 </li>

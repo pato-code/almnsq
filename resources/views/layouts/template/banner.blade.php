@@ -30,11 +30,11 @@
                              data-splitout="none"
                              data-responsive_offset="on">
 
-                            <div class="slide--subheadline">{{$one_news->title}}</div>
+                            <div class="slide--subheadline" style="margin-top: -10px;">{{$one_news->title}}</div>
                         </div>
                         <div class="tp-caption"
                              data-x="center" data-hoffset="0"
-                             data-y="center" data-voffset="-65"
+                             data-y="top" data-voffset="-65"
                              data-whitespace="nowrap"
                              data-width="none"
                              data-height="none"
@@ -48,7 +48,11 @@
                              data-splitout="none"
                              data-responsive_offset="on"
                         >
-                            <div class="slide--headline" style="margin-bottom: 10px;">{{$one_news->type->name}}</div>
+                            <div class="slide--headline" style="margin-top: -5px;margin-bottom: 10px;">
+                                @php
+                                    echo wordwrap($one_news->type->name,70,"<br/>");
+                                @endphp
+                            </div>
                         </div>
                         <div class="tp-caption"
                              data-x="center" data-hoffset="0"
@@ -66,7 +70,7 @@
                              data-splitout="none"
                              data-responsive_offset="on"
                         >
-                            <div class="slide--bio text-center" dir="rtl" style="margin-top: 15%;padding-top: 1%;padding-bottom: 1%; size: 22em; width: 82em; height: 450px;">
+                            <div class="slide--bio text-center" dir="rtl" style="margin-top: 13%;padding-top: 1%;padding-bottom: 1%; size: 22em; width: 82em; height: 470px;">
 
                                 @php
                                 echo wordwrap($one_news->text,70,"<br/>");

@@ -5,30 +5,38 @@
              style="margin-top: 200px;"
              dir="rtl">
             <div class="card-header">
-                كل الإعلانات و الأخبار
+                <div class="pull-left">
+                    كل الإعلانات و الأخبار
+                </div>
+                <div class="pull-right">
+                    <a href="{{url('/news/add')}}" class="btn btn-primary">
+                        إضافه خبر
+                    </a>
+                </div>
             </div>
-            <div class="card-body">
-                <table class="table table-responsive">
+            <div class="card-body table-responsive">
+                <table class="table ">
                     <thead>
-                        <tr>
-                            <td>العنوان</td>
-                            <td>المحتوي</td>
-                            <td>النوع</td>
-                        </tr>
+                    <tr>
+                        <td>العنوان</td>
+                        <td>المحتوي</td>
+                        <td>النوع</td>
+                        <td></td>
+                    </tr>
                     </thead>
                     <tbody>
-                        @foreach($news as $new)
-                            <tr>
-                                <td>{{$new->title}}</td>
-                                <td>{{$new->text}}</td>
-                                <td>{{$new->type->name}}</td>
-                                <td>
-                                    <a href="{{url('/news/addSlider' . $new->id)}}" class="btn btn-primary">
-                                        إضافه إلي العارض
-                                    </a>
-                                </td>
-                            </tr>
-                        @endforeach
+                    @foreach($news as $new)
+                        <tr>
+                            <td>{{$new->title}}</td>
+                            <td >{{$new->text}}</td>
+                            <td>{{$new->type->name}}</td>
+                            <td>
+                                <a href="{{url('/news/remove/' . $new->id)}}" class="btn btn-danger">
+                                    مسح الخبر
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

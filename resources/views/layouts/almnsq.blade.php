@@ -49,7 +49,10 @@
 
 @yield('silder')
 
-<section id="page-title" class="page-title bg-overlay bg-overlay-dark" style="margin-top: -7%;">
+<section id="page-title" style="width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: auto;" class="page-title bg-overlay bg-overlay-dark" style="margin-top: -7%;">
     <div class="bg-section">
         <img src="{{asset('images/page-title/1542806781.jpg')}}" alt="Background"/>
     </div>

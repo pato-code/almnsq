@@ -65,4 +65,9 @@ class DaeeNews extends Controller
     public function addSlider($id){
 
     }
+    public function delete($id){
+        $news=News::find($id);
+        $news->delete();
+        return redirect('/news');
+    }
 }

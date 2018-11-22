@@ -23,7 +23,8 @@ Route::get('/admin/user/activate/{id}','Admin\UsersController@ActivateUser'); //
 Route::get('/not','Admin\UsersController@not'); // if user not activated
 Route::get('/news/add','News\DaeeNews@create'); // add news to slider
 Route::post('/news/add','News\DaeeNews@store');// save news to slider
-Route::post('/news','News\DaeeNews@index');// show all newsw in slider
+Route::get('/news','News\DaeeNews@index');// show all newsw in slider
+Route::get('/news/remove/{id}','News\DaeeNews@delete');// show all newsw in slider
 Route::get('/addSermon','Sermon\SermonController@create');// page add friday sermon
 Route::post('/addSermon','Sermon\SermonController@store');// store friday sermon
 Route::get('/city/all','CityController@all');// page show all cities
