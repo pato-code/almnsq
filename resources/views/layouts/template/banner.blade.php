@@ -66,7 +66,7 @@
                              data-splitout="none"
                              data-responsive_offset="on"
                         >
-                            <div class="slide--bio text-center" dir="rtl" style="margin-top: 15%;padding-top: 1%;padding-bottom: 1%; size: 22em; width: 82em; height: 450px;">
+                            <div class="slide--bio text-center" dir="rtl" style="margin-top: 13%;padding-top: 1%;padding-bottom: 1%; size: 22em; width: 82em; height: 450px;">
 
                                 @php
                                 echo wordwrap($one_news->text,70,"<br/>");
