@@ -1,8 +1,8 @@
-<section id="slider" class="slider slider-overlay-dark" style="margin-top: -100px;">
+<section id="slider" class="slider slider-overlay-dark" style="margin-top: -100px; min-height: 120vh;">
 
 
-    <div class="rev_slider_wrapper" >
-        <div id="slider1" class="rev_slider" data-version="5.0">
+    <div class="rev_slider_wrapper" style="min-height: 120vh;">
+        <div id="slider1" class="rev_slider" data-version="5.0" style="min-height: 120vh;">
             <ul>
 
 
@@ -13,7 +13,7 @@
                         data-easein="Power4.easeInOut"
                         data-easeout="Power4.easeInOut"
                         data-masterspeed="2000">
-                        <img src="{{asset('images/'.$one_news->photo)}}" alt="Slide Background Image" />
+                        <img src="{{asset('images/'.$one_news->photo)}}" alt="Slide Background Image" style="min-height: 120vh;"/>
                         <div class="tp-caption"
                              data-x="center" data-hoffset="0"
                              data-y="center" data-voffset="-130"
@@ -21,7 +21,7 @@
                              data-width="none"
                              data-height="none"
                              data-transform_idle="o:1;"
-                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                             data-transform_in="y:[200%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
                              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
                              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
                              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
@@ -29,6 +29,7 @@
                              data-splitin="none"
                              data-splitout="none"
                              data-responsive_offset="on">
+
                             <div class="slide--subheadline">{{$one_news->title}}</div>
                         </div>
                         <div class="tp-caption"
@@ -65,7 +66,7 @@
                              data-splitout="none"
                              data-responsive_offset="on"
                         >
-                            <div class="slide--bio text-center" dir="rtl" style="margin-top: 5%;padding-top: 1%;padding-bottom: 1%; size: 22em; width: 82em; height: 200px;">
+                            <div class="slide--bio text-center" dir="rtl" style="margin-top: 5%;padding-top: 1%;padding-bottom: 1%; size: 22em; width: 82em; height: 300px;">
 
                                 @php
                                 echo wordwrap($one_news->text,70,"<br/>");

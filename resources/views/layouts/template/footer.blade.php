@@ -7,7 +7,9 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-5 col-md-6">
                     <div class="footer--copyright">
-                        <span>&copy; 2018 المنسق الدعوي</span> <a href="#">المنسق الدعوي</a>
+                        <span style="color: #ffffff;">2018&copy;  المنسق الدعوي</span> <a href="#">
+
+                        </a>
                     </div>
                 </div>
                 {{--<div class="col-xs-12 col-sm-7 col-md-6">--}}

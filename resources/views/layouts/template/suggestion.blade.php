@@ -3,7 +3,7 @@
          style="margin-top: 100px;"
          dir="rtl">
         <div class="card-header text-center wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.2s">
-            إضافه مقترح أو شكوي
+            إضافه مقترح أو شكوى
         </div>
         <div class="card-body " data-wow-duration="1s" data-wow-delay="1.6s">
             <form method="POST" action="{{ url('/suggestion/add') }}" aria-label="{{ __('Login') }}"
@@ -49,7 +49,7 @@
                 <div class="form-group row ">
                     <div class="col-md-offset-1 col-md-11">
                         <label for="suggestion_body"
-                               class="col-sm-4 col-form-label text-md-right">المقترح أو الشكوي</label>
+                               class="col-sm-4 col-form-label text-md-right">المقترح أو الشكوى</label>
                         <div class="col-md-5">
                             <textarea id="suggestion_body" type="text"
                                       class="form-control{{ $errors->has('strengths') ? ' is-invalid' : '' }} "
@@ -68,7 +68,7 @@
                 <div class="form-group row mb-0">
                     <div class="col-md-7  col-md-offset-5">
                         <button type="submit" class="btn btn-primary col-sm-offset-1">
-                            إضافه شكوي أو مقترح
+                            إضافه شكوى أو مقترح
                         </button>
 
                     </div>

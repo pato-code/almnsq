@@ -1,6 +1,6 @@
 <!-- Document Wrapper
 	============================================= -->
-<div id="wrapper" class="wrapper clearfix">
+<div id="wrapper" class="wrapper clearfix" style="color: #1c7430;">
     <header id="navbar-spy" class="header header-transparent header-fixed">
         <nav id="primary-menu" class="navbar navbar-fixed-top navbar-dark">
             <div class="container">

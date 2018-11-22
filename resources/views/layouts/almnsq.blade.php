@@ -51,7 +51,7 @@
 
 <section id="page-title" class="page-title bg-overlay bg-overlay-dark" style="margin-top: -7%;">
     <div class="bg-section">
-        <img src="{{asset('images/page-title/bg-color2.jpg')}}" alt="Background"/>
+        <img src="{{asset('images/page-title/1542806781.jpg')}}" alt="Background"/>
     </div>
     @yield('content')
     @yield('khotob')
