@@ -1,8 +1,8 @@
 @extends('layouts.almnsq')
 @section('content')
-    <div class="container">
+    <div class="container" style="height: 120vh;">
         <div class="card card-container"
-             style="margin-top: 150px;"
+             style="margin-top: 200px;"
              dir="rtl">
             <div class="card-header">
 

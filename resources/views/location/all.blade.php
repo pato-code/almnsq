@@ -3,7 +3,7 @@
 
     <section class="container bg-overlay-dark" style="margin-top: -100px;">
         <div class="card card-container"
-             style="margin-top: 100px;"
+             style="margin-top: 200px;"
              dir="rtl">
             <div class="card-header">
                 <a href="{{ url('/location/add')  }}" class="btn btn-success">إضافة جهه</a>

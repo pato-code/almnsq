@@ -1,7 +1,7 @@
 @extends('layouts.almnsq')
 
 @section('content')
-    <div class="row container" style="margin-top: 100px;margin-bottom: 100px;">
+    <div class="row container" style="margin-top: 200px;margin-bottom: 100px;">
 
         <div class="col-md-6 col-sm-12" >
             <div class="card card-container" style="margin-top: 100px;" dir="rtl">

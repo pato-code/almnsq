@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="card card-container"
-             style="margin-top: 150px;margin-bottom: 1%;"
+             style="margin-top: 200px;margin-bottom: 1%;"
              dir="rtl">
             <div class="card-header">
                 إضافة نشاط
