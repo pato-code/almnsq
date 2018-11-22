@@ -70,4 +70,17 @@ class DaeeNews extends Controller
         $news->delete();
         return redirect('/news');
     }
+    public function edit($id){
+        $news=News::find($id);
+        $types=NewsType::all();
+        return View('News.edit' , compact('news' , 'types'));
+    }
+    public function update(Request $request,$id){
+        $input = $request->all();
+        $news=News::find($id);
+        $news->fill($input);
+        $news->save();
+
+        return redirect('/news');
+    }
 }

@@ -30,7 +30,7 @@
                              data-splitout="none"
                              data-responsive_offset="on">
 
-                            <div class="slide--subheadline" style="margin-top: -10px;">{{$one_news->title}}</div>
+                            <div class="slide--subheadline" style="margin-top: -5px;">{{$one_news->title}}</div>
                         </div>
                         <div class="tp-caption"
                              data-x="center" data-hoffset="0"

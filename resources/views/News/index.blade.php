@@ -22,6 +22,7 @@
                         <td>المحتوي</td>
                         <td>النوع</td>
                         <td></td>
+                        <td></td>
                     </tr>
                     </thead>
                     <tbody>
@@ -30,6 +31,12 @@
                             <td>{{$new->title}}</td>
                             <td >{{$new->text}}</td>
                             <td>{{$new->type->name}}</td>
+                            <td>
+                                <a href="{{url('/news/edit/' . $new->id)}}" class="btn btn-success">
+                                    تعديل الخبر
+                                </a>
+
+                            </td>
                             <td>
                                 <a href="{{url('/news/remove/' . $new->id)}}" class="btn btn-danger">
                                     مسح الخبر

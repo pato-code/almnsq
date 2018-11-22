@@ -17,7 +17,7 @@
                             <div class="col-md-5">
                                 <input id="name" type="text"
                                        class="form-control col-md-12 col-sm-12 form-control{{ $errors->has('strengths') ? ' is-invalid' : '' }} "
-                                       name="name"
+                                       name="name" required="required"
                                 />
 
                                 @if ($errors->has('name'))
@@ -29,14 +29,14 @@
                         </div>
                     </div>
                     <div class="form-inline row">
-                        <div class="col-md-offset-1 col-md-11 col-sm-12 wow fadeIn" data-wow-duration="1.1s"
+                        <div class="col-md-offset-1 col-md-11 wow fadeIn" data-wow-duration="1.1s"
                              data-wow-delay=".9s">
-                            <label class="pull-left col-md-4 col-sm-12 wow zoomInUp" data-wow-duration="1.5s"
-                                   data-wow-delay=".9s" for="type_id">نوع المنشط</label>
-                            <select id="type_id" class="wow slideInDown col-md-offset-2 col-md-5 col-sm-12"
+                            <label class="pull-left col-md-6 wow zoomInUp" data-wow-duration="1.5s"
+                                   data-wow-delay=".9s" for="type_id">النوع</label>
+                            <select id="type_id" class="wow slideInDown col-md-offset-2 col-md-5"
                                     data-wow-duration="2.5s" data-wow-delay="1.0s" name="type_id" style="right: 2%;"
-                                    required dir="rtl">
-                                <option value="0">إختر النوع</option>
+                                    required dir="rtl" required="required">
+                                {{--<option value="0">إختر النوع</option>--}}
                                 @foreach($types as $type)
                                     <option value="{{$type->id}}">{{$type->name}}</option>
                                 @endforeach
@@ -51,8 +51,8 @@
                                    data-wow-delay=".9s" for="city_id">المدينه</label>
                             <select id="city_id" class="wow slideInDown col-md-offset-2 col-md-5 col-sm-12"
                                     data-wow-duration="2.5s" data-wow-delay="1.0s" name="city_id" style="right: 2%;"
-                                    required dir="rtl">
-                                <option value="0">إختر مدينه</option>
+                                    required dir="rtl" required="required">
+                                {{--<option value="0">إختر مدينه</option>--}}
                                 @foreach($cities as $city)
                                     <option value="{{$city->id}}">{{$city->name}}</option>
                                 @endforeach
@@ -66,8 +66,8 @@
                             <select id="neighborhood_id" class="col-md-offset-2 col-md-5 col-sm-12"
                                     name="neighborhood_id"
                                     style="right: 2%;"
-                                    required dir="rtl">
-                                <option value="0">إختر حي</option>
+                                    required="required" dir="rtl">
+                                {{--<option value="0">إختر حي</option>--}}
                             </select>
                         </div>
                     </div>
@@ -77,9 +77,9 @@
                             <label class="pull-left col-md-4 col-sm-12" for="mosque_id">المسجد</label>
                             <select id="mosque_id" class="col-md-offset-2 col-md-5 col-sm-12" name="mosque_id"
                                     style="right: 2%;"
-                                    required
+                                    required="required"
                                     dir="rtl">
-                                <option value="0">إختر مسجد</option>
+                                {{--<option value="0">إختر مسجد</option>--}}
                             </select>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                             <div class="col-md-5">
                                 <input id="day" type="date"
                                        class="form-control col-md-12 col-sm-12 form-control{{ $errors->has('strengths') ? ' is-invalid' : '' }} "
-                                       name="day"
+                                       name="day" required="required"
                                 />
 
                                 @if ($errors->has('strengths'))
@@ -107,8 +107,8 @@
                             <select id="period_id" class="wow slideInDown col-md-offset-2 col-md-5 col-sm-12"
                                     data-wow-duration="2.5s"
                                     data-wow-delay="1.0s" name="period_id" style="right: 2%;"
-                                    required dir="rtl">
-                                <option value="0">إختر الفتره</option>
+                                    required dir="rtl" required="required">
+                                {{--<option value="0">إختر الفتره</option>--}}
                                 @foreach($periods as $period)
                                     <option value="{{$period->id}}">{{$period->name}}</option>
                                 @endforeach
