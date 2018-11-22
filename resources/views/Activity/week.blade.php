@@ -46,7 +46,7 @@
                         <td>الفتره</td>
                         <td>أسم الموقع</td>
                         <td>نوع المنشط</td>
-                        <td>أسم طالب المنشط</td>
+                        {{--<td>أسم طالب المنشط</td>--}}
                         <td>عنوان المنشط</td>
                         <td>المدينه</td>
                         <td>الحي</td>
@@ -99,13 +99,13 @@
                                     {{$activity->type->name}}
                                 @endif
                             </td>
-                            <td>
-                                @if($activity->request_name != null)
-                                    {{$activity->request_name}}
-                                @else
-                                    لا يوجد
-                                @endif
-                            </td>
+                            {{--<td>--}}
+                                {{--@if($activity->request_name != null)--}}
+                                    {{--{{$activity->request_name}}--}}
+                                {{--@else--}}
+                                    {{--لا يوجد--}}
+                                {{--@endif--}}
+                            {{--</td>--}}
                             <td>{{$activity->name}}</td>
                             <td>{{$activity->city->name}}</td>
                             <td>{{$activity->nieghborhood->name}}</td>
