@@ -94,7 +94,9 @@
     $.fn.select2.defaults.set("theme", "bootstrap");
 </script>
 <!-- RS Configration JS Files -->
+<script src="{{asset("js/bootstrapValidator.min.js")}}"></script>
 <script src="{{asset("js/wow.min.js")}}"></script>
+
 <script>
     new WOW().init();
 </script>
@@ -109,9 +111,7 @@
     </script>
 @endif
 
-@if(isset($mosque))
-    <script src="{{asset("js/mosque_add.js")}}"></script>
-@endif
+
 @if(isset($addActivity))
     <script>
         $(document).ready(function () {

@@ -8,8 +8,8 @@
                 <a href="{{ url('/mosque/add')  }}" class="btn btn-success">إضافة مسجد</a>
                 كل المساجد
             </div>
-            <div class="card-body">
-                <table class="table table-responsive">
+            <div class="card-body table-responsive">
+                <table class="table">
                     <thead>
                     <tr>
                         <td>

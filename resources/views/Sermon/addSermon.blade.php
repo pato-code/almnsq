@@ -13,37 +13,46 @@
                     @csrf
 
                     <div class="form-group row">
-                        <label for="title"
-                               class="col-sm-12 col-md-4 col-form-label text-md-right">نص الخطبه</label>
+                        <div class="col-md-offset-1 col-md-11 col-sm-12">
+                            <label for="title"
+                                   class="pull-left col-md-4 col-sm-12">نص الخطبه</label>
 
-                        <div class="col-md-6 col-sm-12">
+                            <div class="col-md-5">
                             <textarea id="title" type="title"
                                       class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title"
                                       required autofocus>
                             </textarea>
 
-                            @if ($errors->has('title'))
-                                <span class="invalid-feedback" role="alert">
+                                @if ($errors->has('title'))
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('title') }}</strong>
                                     </span>
-                            @endif
+                                @endif
+                            </div>
                         </div>
                     </div>
-                    <div class="form-inline row">
-                        <label class="pull-left col-sm-12 col-md-4" for="mosque_id">المسجد</label>
-                        <select id="mosque_id" class="form-control col-md-4 col-sm-offset-1 col-sm-8" name="mosque_id"
-                                required dir="rtl">
-                            @foreach($mosques as $mosque)
-                                <option value="{{$mosque->id}}">{{$mosque->name}}</option>
-                            @endforeach
-                        </select>
+                    <div class="form-group row">
+                        <div class="col-md-offset-1 col-md-11 col-sm-12">
+                            <label class="col-md-4 col-sm-12" for="mosque_id">المسجد</label>
+                            <div class="col-md-5">
+                                <select id="mosque_id" class="form-control col-md-12 col-sm-12"
+                                        name="mosque_id"
+                                        required dir="rtl">
+                                    @foreach($mosques as $mosque)
+                                        <option value="{{$mosque->id}}">{{$mosque->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-inline row">
-                        <label class="col-sm-4 col-form-label text-md-right">إضافة ملف</label>
-                        <div class="container">
-                            <input id="file" type="file"
-                                   class="form-control{{ $errors->has('file') ? ' is-invalid' : '' }} col-md-4 col-sm-offset-1 col-sm-8"
-                                   name="file">
+                    <div class="form-group row">
+                        <div class="col-md-offset-1 col-md-11 col-sm-12">
+                            <label class="col-md-4 col-sm-12">إضافة ملف</label>
+                            <div class="col-md-5">
+                                <input id="file" type="file"
+                                       class="form-control col-md-12 col-sm-12{{ $errors->has('file') ? ' is-invalid' : '' }}"
+                                       name="file">
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row mb-0">

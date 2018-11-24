@@ -8,15 +8,16 @@
                 إضافة نشاط
             </div>
             <div class="card-body">
-                <form method="POST" action="{{url('/activity/add')}}" aria-label="{{ __('Login') }}"
+                <form data-toggle="validator" role="form" id="add_activity" method="POST"
+                      action="{{url('/activity/add')}}" aria-label="{{ __('Login') }}"
                       enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group row">
+                    <div class="form-group row ">
                         <div class="col-md-offset-1 col-md-11 col-sm-12">
                             <label for="name" class="pull-left col-md-4 col-sm-12">عنوان المنشط</label>
                             <div class="col-md-5">
                                 <input id="name" type="text"
-                                       class="form-control col-md-12 col-sm-12 form-control{{ $errors->has('strengths') ? ' is-invalid' : '' }} "
+                                       class="form-control col-md-12 col-sm-12{{ $errors->has('strengths') ? ' is-invalid' : '' }} "
                                        name="name"
                                 />
 
@@ -26,66 +27,79 @@
                                 </span>
                                 @endif
                             </div>
+
                         </div>
                     </div>
-                    <div class="form-inline row">
+                    <div class="form-group row">
                         <div class="col-md-offset-1 col-md-11 col-sm-12 wow fadeIn" data-wow-duration="1.1s"
                              data-wow-delay=".9s">
-                            <label class="pull-left col-md-4 col-sm-12 wow zoomInUp" data-wow-duration="1.5s"
+                            <label class="col-md-4 col-sm-12 wow zoomInUp" data-wow-duration="1.5s"
                                    data-wow-delay=".9s" for="type_id">النوع</label>
-                            <select id="type_id" class="wow slideInDown col-md-offset-2 col-md-5 col-sm-12"
-                                    data-wow-duration="2.5s" data-wow-delay="1.0s" name="type_id" style="right: 2%;"
-                                    required dir="rtl">
-                                <option value="0">إختر النوع</option>
-                                @foreach($types as $type)
-                                    <option value="{{$type->id}}">{{$type->name}}</option>
-                                @endforeach
-                            </select>
+                            <div class="col-md-5">
+                                <select id="type_id" class="form-control col-md-12 col-sm-12"
+                                        data-wow-duration="2.5s" data-wow-delay="1.0s" name="type_id"
+                                        required dir="rtl">
+                                    <option value="">إختر النوع</option>
+                                    @foreach($types as $type)
+                                        <option value="{{$type->id}}">{{$type->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
+
                     </div>
 
-                    <div class="form-inline row">
+                    <div class="form-group row">
                         <div class="col-md-offset-1 col-md-11 col-sm-12 wow fadeIn" data-wow-duration="1.1s"
                              data-wow-delay=".9s">
-                            <label class="pull-left col-md-4 col-sm-12 wow zoomInUp" data-wow-duration="1.5s"
+                            <label class="col-md-4 col-sm-12 wow zoomInUp" data-wow-duration="1.5s"
                                    data-wow-delay=".9s" for="city_id">المدينه</label>
-                            <select id="city_id" class="wow slideInDown col-md-offset-2 col-md-5 col-sm-12"
-                                    data-wow-duration="2.5s" data-wow-delay="1.0s" name="city_id" style="right: 2%;"
-                                    required dir="rtl">
-                                <option value="0">إختر مدينه</option>
-                                @foreach($cities as $city)
-                                    <option value="{{$city->id}}">{{$city->name}}</option>
-                                @endforeach
-                            </select>
+                            <div class="col-md-5">
+                                <select required="required" id="city_id"
+                                        class="form-control wow slideInDown form-control col-md-12 col-sm-12"
+                                        data-wow-duration="2.5s" data-wow-delay="1.0s" name="city_id" style="right: 2%;"
+                                        dir="rtl">
+                                    <option value="">إختر مدينه</option>
+                                    @foreach($cities as $city)
+                                        <option value="{{$city->id}}">{{$city->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                         </div>
+
                     </div>
 
-                    <div class="form-inline row margin-btm">
+                    <div class="form-group row">
                         <div class="col-md-offset-1 col-md-11  col-sm-12">
-                            <label class="pull-left col-md-4" for="neighborhood_id">الحي</label>
-                            <select id="neighborhood_id" class="col-md-offset-2 col-md-5 col-sm-12"
-                                    name="neighborhood_id"
-                                    style="right: 2%;"
-                                    required dir="rtl">
-                                <option value="0">إختر حي</option>
-                            </select>
+                            <label class="col-md-4" for="neighborhood_id">الحي</label>
+                            <div class="col-md-5">
+                                <select id="neighborhood_id" class="form-control col-md-12 col-sm-12"
+                                        name="neighborhood_id"
+                                        style="right: 2%;"
+                                        required dir="rtl">
+                                    <option value="">إختر حي</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="form-inline row margin-btm">
+                    <div class="form-group row margin-btm">
                         <div class="col-md-offset-1 col-md-11 col-sm-12">
-                            <label class="pull-left col-md-4 col-sm-12" for="mosque_id">المسجد</label>
-                            <select id="mosque_id" class="col-md-offset-2 col-md-5 col-sm-12" name="mosque_id"
-                                    style="right: 2%;"
-                                    required
-                                    dir="rtl">
-                                <option value="0">إختر مسجد</option>
-                            </select>
+                            <label class="col-md-4 col-sm-12" for="mosque_id">المسجد</label>
+                            <div class="col-md-5">
+                                <select id="mosque_id" class="form-control col-md-12 col-sm-12" name="mosque_id"
+                                        style="right: 2%;"
+                                        required
+                                        dir="rtl">
+                                    <option value="">إختر مسجد</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-offset-1 col-md-11 col-sm-12">
-                            <label for="day" class="pull-left col-md-4 col-sm-12">يوم المنشط</label>
+                            <label for="day" class="col-md-4 col-sm-12">يوم المنشط</label>
                             <div class="col-md-5">
                                 <input id="day" type="date"
                                        class="form-control col-md-12 col-sm-12 form-control{{ $errors->has('strengths') ? ' is-invalid' : '' }} "
@@ -100,19 +114,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-inline row  margin-btm">
+                    <div class="form-group row">
                         <div class="col-md-offset-1 col-md-11 col-sm-12">
-                            <label class="pull-left col-md-4 col-sm-12"
+                            <label class="col-md-4 col-sm-12"
                                    for="period_id">الفتره</label>
-                            <select id="period_id" class="wow slideInDown col-md-offset-2 col-md-5 col-sm-12"
-                                    data-wow-duration="2.5s"
-                                    data-wow-delay="1.0s" name="period_id" style="right: 2%;"
-                                    required dir="rtl">
-                                <option value="0">إختر الفتره</option>
-                                @foreach($periods as $period)
-                                    <option value="{{$period->id}}">{{$period->name}}</option>
-                                @endforeach
-                            </select>
+                            <div class="col-md-5 col-sm-12">
+                                <select id="period_id" class="wow slideInDown form-control col-md-12 col-sm-12"
+                                        data-wow-duration="2.5s"
+                                        data-wow-delay="1.0s" name="period_id"
+                                        required dir="rtl">
+                                    <option value="0">إختر الفتره</option>
+                                    @foreach($periods as $period)
+                                        <option value="{{$period->id}}">{{$period->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row mb-0">

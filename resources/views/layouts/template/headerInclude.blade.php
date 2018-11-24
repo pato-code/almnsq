@@ -39,6 +39,7 @@
     {{--<link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">--}}
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
+
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/style-rtl.css')}}" rel="stylesheet">
     <link href="{{asset('css/custom.css')}}" rel="stylesheet">
@@ -56,7 +57,7 @@
 
 
     <link rel="stylesheet" href="{{asset("bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css")}}" />
-
+    <link href="{{asset('css/bootstrapValidator.min.css')}}" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file.
 
     -->
