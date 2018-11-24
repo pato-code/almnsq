@@ -22,7 +22,7 @@
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse pull-right" id="navbar-collapse-1" style="color: black;">
+                <div class="collapse navbar-collapse pull-right" id="navbar-collapse-1" style="color: black!important;">
                     <ul class="nav navbar-nav nav-pos-right navbar-right">
 
                         <!-- Home Menu -->

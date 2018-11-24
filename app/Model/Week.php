@@ -26,7 +26,12 @@ class Week extends Model
         return $userActivity;
     }
     public function userCount(User $user){
-        return count($this->userActivity($user));
+        $count = 0;
+        $activities= $this->userActivity($user);
+        foreach ($activities as $activity){
+            $count +=$activity->type->point;
+        }
+        return $count;
     }
 
 }

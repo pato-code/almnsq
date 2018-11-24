@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddActivityTypeToActivity extends Migration
+class AddPointToActivityType extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class AddActivityTypeToActivity extends Migration
      */
     public function up()
     {
-        //
-        Schema::table('activity_types', function($table) {
-            $table->integer('type_id')->unsigned()->nullable();
-            $table->foreign('type_id')->references('id')->on('activity_types');
-
+        Schema::table('activity_types', function (Blueprint $table) {
+            //
+            $table->integer('point')->nullable();
         });
     }
 
@@ -28,6 +26,8 @@ class AddActivityTypeToActivity extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('activity_types', function (Blueprint $table) {
+            //
+        });
     }
 }

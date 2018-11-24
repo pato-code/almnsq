@@ -52,7 +52,10 @@
 <section id="page-title" style="width: 100%;
     height: 100%;
     background-repeat: repeat;
-    background-size: auto;" class="page-title bg-overlay bg-overlay-dark" style="margin-top: -7%;">
+    background-size: auto;
+    margin-top: -7%;
+    padding-top: 2%;
+    " class="page-title bg-overlay bg-overlay-dark">
     <div class="bg-section">
         <img src="{{asset('images/page-title/1542806781.jpg')}}" alt="Background"/>
     </div>

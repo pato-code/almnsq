@@ -37,6 +37,8 @@ class ImamActivities extends Controller
 
 
 
+
+
         $count=$week->userCount(Auth::user());
         $week_count=$week->number_of_activities;
 

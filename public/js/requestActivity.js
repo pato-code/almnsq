@@ -31,36 +31,38 @@ $(document).ready(function () {
     });
     function mosques(){
         let neighborhood_id=$("#activity_neighborhood_id").val();
-
+        alert(neighborhood_id);
         $.get('api/neighorhood/mosque/'+neighborhood_id, (ett) => {
             let mosques="";
             let option="";
             //alert(ett);
             $.each(ett, function(k, v) {
-                option = "<option value='"+v.name+"'>"+v.name+"</option>";
+                option = "<option value='"+v.id+"'>"+v.name+"</option>";
                 mosques +=option;
             });
             mosques +=option;
-            $("#activity_mosque").html(mosques);
+            $("#activity_mosque_id").html(mosques);
         });
 
     }
     $("#activity_city_id").change(function () {
         let city_id=$("#activity_city_id").val();
+        //alert(city_id);
         $.get('api/city/neighorhood/'+city_id, (data) => {
             let neighborhoods="";
             let option="";
+            //console.log(data);
             $.each(data, function(k, v) {
-                option = "<option value='"+v.name+"'>"+v.name+"</option>";
+                option = "<option value='"+v.id+"'>"+v.name+"</option>";
                 neighborhoods +=option;
             });
-            $("#activity_neighborhood").html(neighborhoods);
+            $("#activity_neighborhood_id").html(neighborhoods);
             mosques();
         });
 
     });
 
-    $("#activity_neighborhood").change(function (){
+    $("#activity_neighborhood_id").change(function (){
         mosques();
     });
 });

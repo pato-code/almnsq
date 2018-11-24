@@ -30,7 +30,11 @@
                              data-splitout="none"
                              data-responsive_offset="on">
 
-                            <div class="slide--subheadline">{{$one_news->title}}</div>
+                            <div class="slide--subheadline">
+                                @php
+                                    echo wordwrap($one_news->title,70,"<br/>");
+                                @endphp
+                            </div>
                         </div>
                         <div class="tp-caption"
                              data-x="center" data-hoffset="0"

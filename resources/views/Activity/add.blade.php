@@ -29,11 +29,11 @@
                         </div>
                     </div>
                     <div class="form-inline row">
-                        <div class="col-md-offset-1 col-md-11 wow fadeIn" data-wow-duration="1.1s"
+                        <div class="col-md-offset-1 col-md-11 col-sm-12 wow fadeIn" data-wow-duration="1.1s"
                              data-wow-delay=".9s">
-                            <label class="pull-left col-md-6 wow zoomInUp" data-wow-duration="1.5s"
+                            <label class="pull-left col-md-4 col-sm-12 wow zoomInUp" data-wow-duration="1.5s"
                                    data-wow-delay=".9s" for="type_id">النوع</label>
-                            <select id="type_id" class="wow slideInDown col-md-offset-2 col-md-5"
+                            <select id="type_id" class="wow slideInDown col-md-offset-2 col-md-5 col-sm-12"
                                     data-wow-duration="2.5s" data-wow-delay="1.0s" name="type_id" style="right: 2%;"
                                     required dir="rtl">
                                 <option value="0">إختر النوع</option>
