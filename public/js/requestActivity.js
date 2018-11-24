@@ -31,7 +31,7 @@ $(document).ready(function () {
     });
     function mosques(){
         let neighborhood_id=$("#activity_neighborhood_id").val();
-        alert(neighborhood_id);
+        //alert(neighborhood_id);
         $.get('api/neighorhood/mosque/'+neighborhood_id, (ett) => {
             let mosques="";
             let option="";
