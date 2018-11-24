@@ -38,7 +38,7 @@
                         </div>
                         <div class="tp-caption"
                              data-x="center" data-hoffset="0"
-                             data-y="top" data-voffset="-65"
+                             data-y="top" data-voffset="120"
                              data-whitespace="nowrap"
                              data-width="none"
                              data-height="none"
