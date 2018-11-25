@@ -34,7 +34,7 @@ Route::get('/sermon/add','Sermon\SermonController@create');// page add friday se
 Route::post('/sermon/add','Sermon\SermonController@store');// store friday sermon
 Route::get('/sermon/edit/{id}','Sermon\SermonController@update');// show edit add friday sermon
 Route::post('/sermon/edit/{id}','Sermon\SermonController@edit');// edit sermon
-Route::post('/sermon/delete/{id}','Sermon\SermonController@delete');// delete friday sermon
+Route::get('/sermon/delete/{id}','Sermon\SermonController@delete');// delete friday sermon
 Route::get('/city/all','CityController@all');// page show all cities
 Route::get('/city/add','CityController@create');// page to add city
 Route::post('/city/add','CityController@store');// page to store city
