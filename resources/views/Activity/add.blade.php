@@ -123,7 +123,7 @@
                                         data-wow-duration="2.5s"
                                         data-wow-delay="1.0s" name="period_id"
                                         required dir="rtl">
-                                    <option value="0">إختر الفتره</option>
+                                    <option value="">إختر الفتره</option>
                                     @foreach($periods as $period)
                                         <option value="{{$period->id}}">{{$period->name}}</option>
                                     @endforeach
