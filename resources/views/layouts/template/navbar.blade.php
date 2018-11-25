@@ -211,8 +211,8 @@
                                 </li>
                                 <li>
 
-                                    <a href="{{ url('addSermon') }}" class="dropdown-toggle menu-item">
-                                        إضافة خطبة
+                                    <a href="{{ url('sermon') }}" class="dropdown-toggle menu-item">
+                                        الخطب
                                     </a>
 
                                 </li>
@@ -251,7 +251,7 @@
 
                             </li>
                             <li>
-                                <a href="#slider" class="dropdown-toggle menu-item">الخطب</a>
+                                <a href="#slider" class="dropdown-toggle menu-item">خطب الجمعه</a>
                             </li>
 
                             <li>
@@ -265,7 +265,7 @@
 
                             </li>
                             <li>
-                                <a href="{{url("/welcome")}}?id=slider" class="dropdown-toggle menu-item">الخطب</a>
+                                <a href="{{url("/welcome")}}?id=slider" class="dropdown-toggle menu-item">خطب الجمعه</a>
                             </li>
 
                             <li>

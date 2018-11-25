@@ -8,8 +8,8 @@
                 <a href="{{ url('/neighborhood/add')  }}" class="btn btn-success">إضافة المدن</a>
                 كل الأحياء
             </div>
-            <div class="card-body">
-                <table class="table table-responsive">
+            <div class="card-body table-responsive">
+                <table class="table ">
                     <thead>
                     <tr>
                         <td>

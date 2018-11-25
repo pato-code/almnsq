@@ -4,11 +4,12 @@
         <div class="row">
         @forelse($sermons as $sermon)
 
-            <div class="banner-panel" style="background-image: url('{{asset('/images/banners/3.jpg')}}');">
+                {{--banners/3.jpg--}}
+            <div class="banner-panel" style="background-image: url('{{asset('/images/'. $sermon->photo != null ? $sermon->photo : 'banners/3.jpg')}}');">
 
                 {{--<h6>{{$sermon->type->name}}</h6>--}}
                 <h3>{{$sermon->created_at}}</h3>
-                <p>{{$sermon->title}}</p>
+                <p>{{$sermon->title}}   dksklfsdklfklsdkl</p>
                 @if($sermon->file != null)
                     <a href="{{asset('files/'.$sermon->file)}}">معاينه الملف</a>
                 @endif

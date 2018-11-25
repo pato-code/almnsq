@@ -5,10 +5,10 @@
              style="margin-top: 100px;"
              dir="rtl">
             <div class="card-header">
-                إضافه خطبه
+                تعديل خطبه
             </div>
             <div class="card-body">
-                <form method="POST" action="{{ url('/addSermon') }}" aria-label="{{ __('Login') }}"
+                <form method="POST" action="{{ url('/sermon/edit/' . $sermon->id) }}" aria-label="{{ __('Login') }}"
                       enctype="multipart/form-data">
                     @csrf
 
@@ -20,7 +20,8 @@
                             <div class="col-md-5">
                             <textarea id="title" type="title"
                                       class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}" name="title"
-                                      required autofocus>
+                                      required autofocus >
+                                {{$sermon->title}}
                             </textarea>
 
                                 @if ($errors->has('title'))
@@ -39,7 +40,7 @@
                                         name="mosque_id"
                                         required dir="rtl">
                                     @foreach($mosques as $mosque)
-                                        <option value="{{$mosque->id}}">{{$mosque->name}}</option>
+                                        <option {{$sermon->mosque_id == $mosque->id ? "selected" : ''}} value="{{$mosque->id}}">{{$mosque->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -68,7 +69,7 @@
                     <div class="form-group row mb-0">
                         <div class="col-sm-10 col-sm-offset-2 col-md-8 offset-md-4">
                             <button type="submit" class="btn btn-primary">
-                                إضافه الخطبة
+                                تعديل الخطبة
                             </button>
 
                         </div>

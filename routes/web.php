@@ -27,8 +27,14 @@ Route::get('/news/edit/{id}','News\DaeeNews@edit'); // add news to slider
 Route::post('/news/edit/{id}','News\DaeeNews@update');// save news to slider
 Route::get('/news','News\DaeeNews@index');// show all newsw in slider
 Route::get('/news/remove/{id}','News\DaeeNews@delete');// show all newsw in slider
-Route::get('/addSermon','Sermon\SermonController@create');// page add friday sermon
-Route::post('/addSermon','Sermon\SermonController@store');// store friday sermon
+
+Route::get('/sermon','Sermon\SermonController@index');// page all friday sermon
+Route::post('/sermon','Sermon\SermonController@store');// store friday sermon
+Route::get('/sermon/add','Sermon\SermonController@create');// page add friday sermon
+Route::post('/sermon/add','Sermon\SermonController@store');// store friday sermon
+Route::get('/sermon/edit/{id}','Sermon\SermonController@update');// show edit add friday sermon
+Route::post('/sermon/edit/{id}','Sermon\SermonController@edit');// edit sermon
+Route::post('/sermon/delete/{id}','Sermon\SermonController@delete');// delete friday sermon
 Route::get('/city/all','CityController@all');// page show all cities
 Route::get('/city/add','CityController@create');// page to add city
 Route::post('/city/add','CityController@store');// page to store city

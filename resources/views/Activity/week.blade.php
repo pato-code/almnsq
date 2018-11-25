@@ -51,6 +51,7 @@
                         <td>المدينه</td>
                         <td>الحي</td>
                         <td>الحاله</td>
+                        <td></td>
                     </tr>
                     </thead>
                     <tbody>
@@ -120,6 +121,10 @@
                                     تم رفضه
                                 @endif
                             </td>
+                            {{--<td>--}}
+                                {{--<a href="{{url('/activity/edit/' . $activity->id)}}" class="btn btn-success">تعديل المشط</a>--}}
+                                {{--<a href="{{url('/activity/delete/' . $activity->id)}}" class="btn btn-success">مسح المشط</a>--}}
+                            {{--</td>--}}
                         </tr>
                     @empty
                         <div class="pull-left">

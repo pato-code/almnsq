@@ -12,7 +12,13 @@
                         <div class="blog-entry">
                             <div class="entry--img">
                                 <a href="#">
-                                    <img src="{{asset('/images/blog/grid/khotab.jpg')}}" alt="entry image"
+                                    {{--{{asset('/images/'. $sermon->photo != null ? $sermon->photo : 'banners/3.jpg')}}--}}
+                                    @php
+                                        $test = $sermon->photo != null ? $sermon->photo : 'blog/grid/khotab.jpg';
+                                        $image = asset('images/'.$test );
+
+                                    @endphp
+                                    <img src="{{$image}}" alt="entry image"
                                          class="img-rounded"/>
                                 </a>
                             </div>
