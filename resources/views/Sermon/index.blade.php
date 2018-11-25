@@ -22,6 +22,7 @@
                             المسجد
                         </td>
                         <td></td>
+                        <td></td>
                     </tr>
                     </thead>
                     <tbody>
@@ -31,10 +32,12 @@
                             <td>{{$sermon->title}}</td>
                             <td>{{$sermon->mosque->name}}</td>
                             <td>
-                                <a href="{{url('sermon/edit/' . $sermon->id)}}" class="btn btn-success col-md-5 col-sm-5">
+                                <a href="{{url('sermon/edit/' . $sermon->id)}}" class="btn btn-success">
                                     التعديل
                                 </a>
-                                <a href="{{url('sermon/delete/' . $sermon->id)}}" class="btn btn-danger col-md-offset-1 col-sm-offset-1 col-md-5 col-sm-5">
+                            </td>
+                            <td>
+                                <a href="{{url('sermon/delete/' . $sermon->id)}}" class="btn btn-danger">
                                     المسح
                                 </a>
                             </td>
