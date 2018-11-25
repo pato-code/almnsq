@@ -17,7 +17,7 @@
                 <div class="progressbar col-md-10 ">
                     <div class="progress-title pull-left">
                         <span class="title">إستيفاء النصاب من النشاطات</span>
-                        <span class="value">{{$count}} من {{$week_count}}</span>
+                        <span class="value">{{$count ? $count : 'Null'}} من {{$week_count}}</span>
                     </div>
 
 
