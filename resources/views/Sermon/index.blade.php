@@ -31,11 +31,11 @@
                             <td>{{$sermon->title}}</td>
                             <td>{{$sermon->mosque->name}}</td>
                             <td>
-                                <a href="{{url('sermon/edit/' . $sermon->id)}}" class="btn btn-success col-md-6 col-sm-6">
-                                    تعديل الخطبة
+                                <a href="{{url('sermon/edit/' . $sermon->id)}}" class="btn btn-success col-md-5 col-sm-5">
+                                    التعديل
                                 </a>
-                                <a href="{{url('sermon/delete/' . $sermon->id)}}" class="btn btn-danger col-md-6 col-sm-6">
-                                    مسح الخطبة
+                                <a href="{{url('sermon/delete/' . $sermon->id)}}" class="btn btn-danger col-md-offset-1 col-sm-offset-1 col-md-5 col-sm-5">
+                                    المسح
                                 </a>
                             </td>
                         </tr>
