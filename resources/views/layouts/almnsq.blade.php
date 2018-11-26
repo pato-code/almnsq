@@ -93,6 +93,15 @@
 <script>
     $.fn.select2.defaults.set("theme", "bootstrap");
 </script>
+<script>
+    $(document).ready(function (){
+       $('input').focus(function(){
+            $("#navbar-btn").addClass('collapsed');
+            $("#navbar-btn").attr("aria-expanded","false");
+            $("#navbar-collapse-1").removeClass("in");
+       });
+    });
+</script>
 <!-- RS Configration JS Files -->
 <script src="{{asset("js/bootstrapValidator.min.js")}}"></script>
 <script src="{{asset("js/wow.min.js")}}"></script>
