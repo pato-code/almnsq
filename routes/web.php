@@ -82,7 +82,9 @@ Route::get('/activity/deny/{id}','Imam\ImamActivities@deny');//accept guest acti
 Route::get('/activity','Imam\ImamActivities@index');//show all imam week activities
 Route::get('/activity/add','Imam\ImamActivities@create');//show page to add activity
 Route::post('/activity/add','Imam\ImamActivities@add');//store new activity
-
+Route::get('/activity/edit/{id}','Imam\ImamActivities@edit');//show page to edit activity
+Route::post('/activity/edit/{id}','Imam\ImamActivities@update');//store edited activity
+Route::get('/activity/delete/{id}','Imam\ImamActivities@delete');//delete activity
 
 
 //Route::get('/ register','Auth\Register@showRegister');

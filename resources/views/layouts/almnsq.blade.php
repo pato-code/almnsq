@@ -108,6 +108,10 @@
 
 <script>
     new WOW().init();
+    var x = "{!! url('/') !!}";
+    window.$vars = {
+        app_url : x
+    };
 </script>
 <script src="{{asset("js/rsconfig.js")}}"></script>
 @if(isset($activityWeek))
@@ -128,6 +132,16 @@
         });
     </script>
     <script src="{{asset("js/activity.js")}}"></script>
+
+@endif
+@if(isset($addActivityEdit))
+    <script>
+        $(document).ready(function () {
+
+            $("#period_id").select2();
+        });
+    </script>
+    <script src="{{asset("js/activity_edit.js")}}"></script>
 
 @endif
 

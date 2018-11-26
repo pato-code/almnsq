@@ -17,7 +17,7 @@
                 <div class="progressbar col-md-10 ">
                     <div class="progress-title pull-left">
                         <span class="title">إستيفاء النصاب من النشاطات</span>
-                        <span class="value">{{$count ? $count : 'Null'}} من {{$week_count}}</span>
+                        <span class="value">{{$count}} من {{$week_count}}</span>
                     </div>
 
 
@@ -51,6 +51,8 @@
                         <td>المدينه</td>
                         <td>الحي</td>
                         <td>الحاله</td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                     </tr>
                     </thead>
@@ -121,10 +123,12 @@
                                     تم رفضه
                                 @endif
                             </td>
-                            {{--<td>--}}
-                                {{--<a href="{{url('/activity/edit/' . $activity->id)}}" class="btn btn-success">تعديل المشط</a>--}}
-                                {{--<a href="{{url('/activity/delete/' . $activity->id)}}" class="btn btn-success">مسح المشط</a>--}}
-                            {{--</td>--}}
+                            <td>
+                                <a href="{{url('/activity/edit/' . $activity->id)}}" class="btn btn-success">تعديل المشط</a>
+                            </td>
+                            <td>
+                                <a href="{{url('/activity/delete/' . $activity->id)}}" class="btn btn-danger">مسح المشط</a>
+                            </td>
                         </tr>
                     @empty
                         <div class="pull-left">

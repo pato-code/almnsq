@@ -10,7 +10,7 @@ $(document).ready(function () {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "../api/suggestion/add",
+            "url": "api/suggestion/add",
             "method": "POST",
             "headers": {
                 "cache-control": "no-cache",

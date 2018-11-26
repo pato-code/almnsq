@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    //
+
     $('#city_id').on('hide.bs.select', function () {
         $(this).trigger("focusout");
     });
@@ -91,8 +93,7 @@ $(document).ready(function () {
         bootstrapValidator.enableFieldValidators('neighborhood_id', true);
 
         let city_id = $("#city_id").val();
-        console.log(window.$vars.app_url);
-        $.get(window.$vars.app_url +'/api/city/neighorhood/' + city_id, (data) => {
+        $.get('../../api/city/neighorhood/' + city_id, (data) => {
             let neighborhoods = "";
             let option = "";
             $.each(data, function (k, v) {
@@ -134,7 +135,7 @@ $(document).ready(function () {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": window.$vars.app_url +'/api/complement/add',
+            "url": "../api/complement/add",
             "method": "POST",
             "headers": {
                 "cache-control": "no-cache",

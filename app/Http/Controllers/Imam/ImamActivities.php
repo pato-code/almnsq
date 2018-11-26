@@ -32,6 +32,7 @@ class ImamActivities extends Controller
             $week->number_of_activities = $activity;
             $week->save();
         }
+        //dd($week);
         $activies=Activity::where('imam_id' , Auth::user()->id)->where('week_id' , $week->id)->get();
         $activies = $activies->sortBy('day');
 
@@ -62,14 +63,14 @@ class ImamActivities extends Controller
         $toImam = ActivityStatus::where("name" , "create")->first();
         $activity->status()->associate($toImam);
         $activity->save();
-        return redirect('/imam/activities');
+        return redirect('/activity/edit/'.$id);
     }
     public function deny($id){
         $activity=Activity::find($id);
         $deny = ActivityStatus::where("name" , "deny")->first();
         $activity->status()->associate($deny);
         $activity->save();
-        return redirect('/imam/activities');
+        return redirect('/activity');
     }
     public function create(){
         $cities = City::all();
@@ -101,6 +102,25 @@ class ImamActivities extends Controller
         $activity->save();
         return redirect('/imam/activities');
 
+    }
+
+    public function edit($id){
+        $cities = City::all();
+        $periods = Period::all();
+        $types = ActivityType::all();
+        $activity = Activity::find($id);
+        return View('Activity.edit' , compact('cities' , 'periods' , 'types' , 'activity'));
+    }
+    public function update($id , Request $request){
+        $activity = Activity::find($id);
+        $activity->fill($request->all());
+        $activity->save();
+        return redirect('/activity');
+    }
+    public function delete($id){
+        $activity = Activity::find($id);
+        $activity->delete();
+        return redirect('/activity');
     }
 
 }

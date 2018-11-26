@@ -8,7 +8,7 @@
                 إضافه خطبه
             </div>
             <div class="card-body">
-                <form method="POST" action="{{ url('/addSermon') }}" aria-label="{{ __('Login') }}"
+                <form method="POST" action="{{ url('/sermon/add') }}" aria-label="{{ __('Login') }}"
                       enctype="multipart/form-data">
                     @csrf
 
