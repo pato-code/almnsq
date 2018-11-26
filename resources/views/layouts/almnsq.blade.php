@@ -22,9 +22,9 @@
 
 }
 @endphp
-<div class="modal fade" id="getResponse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div dir="rtl" class="modal fade " id="getResponse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg" >
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -33,11 +33,12 @@
                 <h4 class="modal-title" id="myModalLabel"></h4>
             </div>
             <div class="modal-body">
-                نشكرك علي التقييم
-
+                <div class="pull-left">
+                    نشكرك علي التقييم
+                </div>
             </div>
             <div class="model-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" aria-label="Close">
                     إغلاق
                 </button>
             </div>
@@ -94,12 +95,12 @@
     $.fn.select2.defaults.set("theme", "bootstrap");
 </script>
 <script>
-    $(document).ready(function (){
-       $('input').focus(function(){
+    $(document).ready(function () {
+        $('input').focus(function () {
             $("#navbar-btn").addClass('collapsed');
-            $("#navbar-btn").attr("aria-expanded","false");
+            $("#navbar-btn").attr("aria-expanded", "false");
             $("#navbar-collapse-1").removeClass("in");
-       });
+        });
     });
 </script>
 <!-- RS Configration JS Files -->
@@ -110,15 +111,16 @@
     new WOW().init();
     var x = "{!! url('/') !!}";
     window.$vars = {
-        app_url : x
+        app_url: x
     };
 </script>
 <script src="{{asset("js/rsconfig.js")}}"></script>
 @if(isset($activityWeek))
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
     <script>
-        $(document).ready(function (){
-            $('#week_activity').progressbar({ use_percentage: false});
+        $(document).ready(function () {
+            $('#week_activity').progressbar({use_percentage: false});
         });
 
     </script>
