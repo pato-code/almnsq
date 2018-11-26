@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed' => 'يوجد خطأ في أسم المتخدم أو كلمة المرور',
+    'throttle' => '   لقد حاولت الدخول مرات كثره يرجي إعاده المحاوله بعد :seconds ثانيه',
+    // Too many login attempts. Please try again in  seconds.
 
 ];
