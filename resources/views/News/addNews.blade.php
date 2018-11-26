@@ -63,11 +63,12 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-md-offset-1 col-md-11 col-sm-12">
-                        <label class="col-md-4 col-sm-12">صورة الخبر</label>
-                        <div class="col-md-5">
-                            <input id="photo" type="file"
-                                   class="form-control col-md-12 col-sm-12{{ $errors->has('photo') ? ' is-invalid' : '' }}" name="photo">
-                        </div>
+                            <label class="col-md-4 col-sm-12">صورة الخبر</label>
+                            <div class="col-md-5">
+                                <input id="photo" type="file"
+                                       class="form-control col-md-12 col-sm-12{{ $errors->has('photo') ? ' is-invalid' : '' }}"
+                                       name="photo">
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row mb-0">

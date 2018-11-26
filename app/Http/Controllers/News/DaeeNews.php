@@ -46,21 +46,23 @@ class DaeeNews extends Controller
         //
         //Validator::validate($request->)
         $input= $request->all();
+        $news =new News();
+        $news->fill($input);
         if ($request->hasFile('photo')){
             try {
                 $file = $request->file('photo');
                 $name = time().'.'.$file->getClientOriginalExtension();
                 $destinationPath = public_path('/images');
                 $file->move($destinationPath, $name);
-                $news =new News();
-                $news->fill($input);
+
                 $news->photo = $name;
-                $news->save();
+
             } catch (Exception $e) {
                 dd($e);
             }
         }
-        return redirect('/');
+        $news->save();
+        return redirect('/news');
     }
     public function addSlider($id){
 
@@ -79,8 +81,21 @@ class DaeeNews extends Controller
         $input = $request->all();
         $news=News::find($id);
         $news->fill($input);
-        $news->save();
 
+        if ($request->hasFile('photo')){
+            try {
+                $file = $request->file('photo');
+                $name = time().'.'.$file->getClientOriginalExtension();
+                $destinationPath = public_path('/images');
+                $file->move($destinationPath, $name);
+
+                $news->photo = $name;
+
+            } catch (Exception $e) {
+                dd($e);
+            }
+        }
+        $news->save();
         return redirect('/news');
     }
 }
