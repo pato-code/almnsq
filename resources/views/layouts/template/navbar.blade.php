@@ -202,6 +202,25 @@
                                     @endif
 
                                 </li>
+                                <li class="has-dropdown">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                        التقييم
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="{{ url('rates/week')}}">
+                                                الأسبوعي
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="{{ url('rates/mounth')}}">
+                                                الشهري
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
                                 <li>
 
                                     <a href="{{ url('news') }}" class="dropdown-toggle menu-item">

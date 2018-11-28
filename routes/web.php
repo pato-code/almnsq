@@ -86,6 +86,7 @@ Route::get('/activity/edit/{id}','Imam\ImamActivities@edit');//show page to edit
 Route::post('/activity/edit/{id}','Imam\ImamActivities@update');//store edited activity
 Route::get('/activity/delete/{id}','Imam\ImamActivities@delete');//delete activity
 
-
+Route::get('rates/week' , 'Evaluation\Week@index');
+Route::get('rates/mounth' , 'Evaluation\Mounth@index');
 //Route::get('/ register','Auth\Register@showRegister');
 

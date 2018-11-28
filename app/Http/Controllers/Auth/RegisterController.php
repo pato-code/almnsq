@@ -57,6 +57,11 @@ class RegisterController extends Controller
     {
         $message = [
             'email.unique' => 'إسم المستخدم موجود',
+            'name.required' => 'الإسم الكامل مطلوب',
+            'email.required' => 'إسم المستخدم مطلوب',
+            'password.required' => 'كلمة المرور مطلوبه',
+            'password.min' => 'يجب أن تكون كلمة المرور علي الأقل سته حروف',
+            'password.confirmed' => 'يجب أن تطابق كلمة المرور'
 
         ];
         return Validator::make($data, [

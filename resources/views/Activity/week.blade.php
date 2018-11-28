@@ -22,7 +22,7 @@
 
 
                     <div class="progress col-sm-12">
-                        <div id="week_activity" class="progress-bar " role="progressbar"
+                        <div class="progress-bar week_activity" role="progressbar"
                              data-transitiongoal="{{$activity_percientige}}"
                              style="width: 0%; background-color: {{$color}}; margin-right: -7%;">
                         </div>

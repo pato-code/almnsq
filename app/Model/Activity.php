@@ -33,6 +33,9 @@ class Activity extends Model
     public function week(){
         return $this->belongsTo('App\Model\Week' , 'week_id');
     }
+    public function monuth(){
+        return $this->belongsTo('App\Model\Mounth' , 'mounth_id');
+    }
     public function type(){
         return $this->belongsTo('App\Model\ActivityType' , 'type_id');
     }

@@ -120,7 +120,7 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#week_activity').progressbar({use_percentage: false});
+            $('.progress-bar').progressbar({use_percentage: false});
         });
 
     </script>

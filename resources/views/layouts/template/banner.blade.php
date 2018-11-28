@@ -12,6 +12,7 @@
                         data-slotamount="default"
                         data-easein="Power4.easeInOut"
                         data-easeout="Power4.easeInOut"
+                        data-delay="4000"
                         data-masterspeed="2000">
                         <img src="{{asset('images/'.$one_news->photo)}}" alt="Slide Background Image" style="min-height: 120vh;"/>
                         <div class="tp-caption"

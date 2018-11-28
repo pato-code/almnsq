@@ -57,6 +57,9 @@ input {
 .logo{
     color: #0f3e68;
 }
+.invalid-feedback{
+    color: #ff3030;
+}
 .footer{
 
 }
@@ -80,6 +83,7 @@ select .has-error .help-block,.has-error .checkbox, .has-error .checkbox-inline,
 .modal-backdrop {
     background-color: rgba(30,185,154,0.5)
 }
+
 .select2 {
 
 

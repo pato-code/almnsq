@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Imam;
 
+use App\Model\Mounth;
 use App\Model\Activity;
 use App\Model\ActivityStatus;
 use App\Model\ActivityType;
@@ -19,7 +20,9 @@ class ImamActivities extends Controller
     public function index(){
         $today=Carbon::today();
         $week=Week::where('start_date' , '<=' , $today)->where('end_date' , '>=' , $today)->first();
+        $mounth=Mounth::where('start_date' , '<=' , $today)->where('end_date' , '>=' , $today)->first();
         if ($week == null){
+
             $today->setWeekStartsAt(Carbon::SATURDAY);
             $today->setWeekEndsAt(Carbon::FRIDAY);
 
@@ -31,6 +34,15 @@ class ImamActivities extends Controller
             $week->end_date = $end;
             $week->number_of_activities = $activity;
             $week->save();
+        }
+        if ($mounth == null){
+
+            $from=$today->startOfMonth()->format('Y/m/d');
+            $end=$today->endOfMonth()->format('Y/m/d');
+            $mounth = new Mounth();
+            $mounth->start_date = $from;
+            $mounth->end_date = $end;
+            $mounth->save();
         }
         //dd($week);
         $activies=Activity::where('imam_id' , Auth::user()->id)->where('week_id' , $week->id)->get();
@@ -87,6 +99,7 @@ class ImamActivities extends Controller
         $input = $request->all();
         //$tody=Carbon::today();
         $week=Week::where('start_date' , '<=' , $day)->where('end_date' , '>=' , $day)->first();
+        $mounth = Mounth::where('start_date' , '<=' , $day)->where('end_date' , '>=' , $day)->first();
         $status = ActivityStatus::where('name','create')->first();
         $activity =new Activity();
 
@@ -97,6 +110,7 @@ class ImamActivities extends Controller
 
         }
         $activity->week()->associate($week);
+        $activity->monuth()->associate($mounth);
         $activity->imam()->associate($imam);
         $activity->status()->associate($status);
         $activity->save();
