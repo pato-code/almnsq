@@ -48,6 +48,7 @@ return array(
     'GeniusTS\\LaravelHijri\\' => array($vendorDir . '/geniusts/laravel-hijri-dates/src'),
     'GeniusTS\\HijriDate\\' => array($vendorDir . '/geniusts/hijri-dates/src'),
     'Fideloper\\Proxy\\' => array($vendorDir . '/fideloper/proxy/src'),
+    'FarhanWazir\\GoogleMaps\\' => array($vendorDir . '/farhanwazir/laravelgooglemaps/src/FarhanWazir/GoogleMaps'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/EmailValidator'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),

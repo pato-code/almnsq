@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.39 on 2018-11-10 06:47:28.
+ * Generated for Laravel 5.6.39 on 2018-11-29 07:35:24.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -13440,142 +13440,140 @@ namespace Illuminate\Support\Facades {
  
 }
 
-namespace GoogleMaps\Facade { 
+namespace FarhanWazir\GoogleMaps\Facades { 
 
     /**
      * 
      *
-     * @see \Illuminate\Html\HtmlBuilder
      */ 
-    class GoogleMapsFacade {
+    class GMapsFacade {
         
         /**
-         * Bootstraping Web Service
+         * 
          *
-         * @param string $service
-         * @return \GoogleMaps\WebService 
          * @static 
          */ 
-        public static function load($service)
+        public static function initialize($config = array())
         {
-            return \GoogleMaps\GoogleMaps::load($service);
+            return \FarhanWazir\GoogleMaps\GMaps::initialize($config);
         }
         
         /**
-         * Setting endpoint
+         * 
          *
-         * @param string $key
-         * @return $this 
          * @static 
          */ 
-        public static function setEndpoint($key = 'json')
+        public static function add_marker($params = array())
         {
-            //Method inherited from \GoogleMaps\WebService            
-            return \GoogleMaps\GoogleMaps::setEndpoint($key);
+            return \FarhanWazir\GoogleMaps\GMaps::add_marker($params);
         }
         
         /**
-         * Getting endpoint
+         * 
          *
-         * @return string 
          * @static 
          */ 
-        public static function getEndpoint()
+        public static function add_polyline($params = array())
         {
-            //Method inherited from \GoogleMaps\WebService            
-            return \GoogleMaps\GoogleMaps::getEndpoint();
+            return \FarhanWazir\GoogleMaps\GMaps::add_polyline($params);
         }
         
         /**
-         * Set parameter by key
+         * 
          *
-         * @param string $key
-         * @param string $value
-         * @return $this 
          * @static 
          */ 
-        public static function setParamByKey($key, $value)
+        public static function add_polygon($params = array())
         {
-            //Method inherited from \GoogleMaps\WebService            
-            return \GoogleMaps\GoogleMaps::setParamByKey($key, $value);
+            return \FarhanWazir\GoogleMaps\GMaps::add_polygon($params);
         }
         
         /**
-         * Get parameter by the key
+         * 
          *
-         * @param string $key
-         * @return mixed 
          * @static 
          */ 
-        public static function getParamByKey($key)
+        public static function add_circle($params = array())
         {
-            //Method inherited from \GoogleMaps\WebService            
-            return \GoogleMaps\GoogleMaps::getParamByKey($key);
+            return \FarhanWazir\GoogleMaps\GMaps::add_circle($params);
         }
         
         /**
-         * Set all parameters at once
+         * 
          *
-         * @param array $param
-         * @return $this 
          * @static 
          */ 
-        public static function setParam($param)
+        public static function add_rectangle($params = array())
         {
-            //Method inherited from \GoogleMaps\WebService            
-            return \GoogleMaps\GoogleMaps::setParam($param);
+            return \FarhanWazir\GoogleMaps\GMaps::add_rectangle($params);
         }
         
         /**
-         * Return parameters array
+         * 
          *
-         * @return array 
          * @static 
          */ 
-        public static function getParam()
+        public static function add_ground_overlay($params = array())
         {
-            //Method inherited from \GoogleMaps\WebService            
-            return \GoogleMaps\GoogleMaps::getParam();
+            return \FarhanWazir\GoogleMaps\GMaps::add_ground_overlay($params);
         }
         
         /**
-         * Get Web Service Response
+         * 
          *
-         * @param string $needle - response key
-         * @return string 
          * @static 
          */ 
-        public static function get($needle = false)
+        public static function create_map()
         {
-            //Method inherited from \GoogleMaps\WebService            
-            return \GoogleMaps\GoogleMaps::get($needle);
+            return \FarhanWazir\GoogleMaps\GMaps::create_map();
         }
         
         /**
-         * Get response value by key
+         * 
          *
-         * @param string $needle - retrieves response parameter using "dot" notation
-         * @param int $offset
-         * @param int $length
-         * @return array 
          * @static 
          */ 
-        public static function getResponseByKey($needle = false, $offset = 0, $length = null)
+        public static function is_lat_long($input)
         {
-            //Method inherited from \GoogleMaps\WebService            
-            return \GoogleMaps\GoogleMaps::getResponseByKey($needle, $offset, $length);
+            return \FarhanWazir\GoogleMaps\GMaps::is_lat_long($input);
         }
         
         /**
-         * Get response status
+         * 
          *
-         * @return mixed 
          * @static 
          */ 
-        public static function getStatus()
+        public static function get_lat_long_from_address($address, $attempts = 0)
         {
-            //Method inherited from \GoogleMaps\WebService            
-            return \GoogleMaps\GoogleMaps::getStatus();
+            return \FarhanWazir\GoogleMaps\GMaps::get_lat_long_from_address($address, $attempts);
+        }
+        
+        /**
+         * This method will check markers are inside geofence or not
+         *
+         * @param $polygon array() -- polygon first and last value of array should be same otherwise result will be accurate
+         * @param $latlngs array()
+         * 
+         * return @array
+         * 
+         * EXAMPLE:::
+         * $latlngs = array("50,70","70,40","-20,30","100,10","-10,-10","40,-20","110,-20");
+         * $polygon = array("-50,30","50,70","100,50","80,10","110,-10","110,-30","-20,-50","-30,-40","10,-10","-10,10","-30,-20","-50,30");
+         * @static 
+         */ 
+        public static function isMarkerInsideGeofence($polygon, $latlngs)
+        {
+            return \FarhanWazir\GoogleMaps\GMaps::isMarkerInsideGeofence($polygon, $latlngs);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getMapName()
+        {
+            return \FarhanWazir\GoogleMaps\GMaps::getMapName();
         }
          
     }
@@ -15926,7 +15924,7 @@ namespace  {
 
     class View extends \Illuminate\Support\Facades\View {}
 
-    class GoogleMaps extends \GoogleMaps\Facade\GoogleMapsFacade {}
+    class GMaps extends \FarhanWazir\GoogleMaps\Facades\GMapsFacade {}
  
 }
 

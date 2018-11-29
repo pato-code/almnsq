@@ -5,13 +5,14 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-11-10 06:47:32.
+    * Generated on 2018-11-29 07:35:25.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
     */
     override(new \Illuminate\Contracts\Container\Container, map([
         '' => '@',
+        'GMaps' => \FarhanWazir\GoogleMaps\GMaps::class,
         'GoogleMaps' => \GoogleMaps\GoogleMaps::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
@@ -149,6 +150,7 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::make(0), map([
         '' => '@',
+        'GMaps' => \FarhanWazir\GoogleMaps\GMaps::class,
         'GoogleMaps' => \GoogleMaps\GoogleMaps::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
@@ -286,6 +288,7 @@ namespace PHPSTORM_META {
     ]));
     override(\Illuminate\Contracts\Container\Container::makeWith(0), map([
         '' => '@',
+        'GMaps' => \FarhanWazir\GoogleMaps\GMaps::class,
         'GoogleMaps' => \GoogleMaps\GoogleMaps::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
@@ -423,6 +426,7 @@ namespace PHPSTORM_META {
     ]));
     override(\App::make(0), map([
         '' => '@',
+        'GMaps' => \FarhanWazir\GoogleMaps\GMaps::class,
         'GoogleMaps' => \GoogleMaps\GoogleMaps::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
@@ -560,6 +564,7 @@ namespace PHPSTORM_META {
     ]));
     override(\App::makeWith(0), map([
         '' => '@',
+        'GMaps' => \FarhanWazir\GoogleMaps\GMaps::class,
         'GoogleMaps' => \GoogleMaps\GoogleMaps::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
@@ -697,6 +702,7 @@ namespace PHPSTORM_META {
     ]));
     override(\app(0), map([
         '' => '@',
+        'GMaps' => \FarhanWazir\GoogleMaps\GMaps::class,
         'GoogleMaps' => \GoogleMaps\GoogleMaps::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,
@@ -834,6 +840,7 @@ namespace PHPSTORM_META {
     ]));
     override(\resolve(0), map([
         '' => '@',
+        'GMaps' => \FarhanWazir\GoogleMaps\GMaps::class,
         'GoogleMaps' => \GoogleMaps\GoogleMaps::class,
         'Illuminate\Broadcasting\BroadcastManager' => \Illuminate\Broadcasting\BroadcastManager::class,
         'Illuminate\Bus\Dispatcher' => \Illuminate\Bus\Dispatcher::class,

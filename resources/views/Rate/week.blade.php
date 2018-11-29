@@ -16,7 +16,7 @@
                     @forelse($rates as $rate)
                         <div class="progressbar row  col-xs-12">
                             <div class="progress-title col-md-4 col-xs-12 " style="margin-left: 0%;">
-                                <span class="title">{{$rate["name"]}}</span>
+                                <span class="title">{{$rate["id"]}} رقم </span>
                                 <span class="value">{{$rate["rate"]}} من {{$week_count}}</span>
                             </div>
 
