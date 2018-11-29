@@ -33,6 +33,7 @@ class Mounth extends Controller
             $count = $mounth->userCount($daee);
             $daee_actives = array();
             $daee_actives += ["name" => $daee->name];
+            $daee_actives += ["id" => $daee->id];
             $daee_actives += ["rate" => $count];
             $activity_percientige = ($count / $week_count) * 100;
             $daee_actives += ["width" => $activity_percientige];
